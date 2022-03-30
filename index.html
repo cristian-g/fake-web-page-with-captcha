@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        <script>
+            function onSubmit(token) {
+                document.getElementById("test").submit();
+            }
+        </script>
+        <form name="test" action="https://httpbin.org/post" method="post" id="test">
+            <button
+                class="g-recaptcha"
+                data-sitekey="6Lc3pisfAAAAALhHbmOZkAF-uy6REz0g6esLMjD7"
+                data-callback="onSubmit">
+                Submit
+            </button>
+        </form>
+    </body>
+</html>
